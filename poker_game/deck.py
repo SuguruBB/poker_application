@@ -29,15 +29,12 @@ class Deck(object):
         :param draw_num:
         :return: designated cards we drew, should return the list
         """
-        self.draw_card = []
-        if draw_num == 0:
-            return self.all_cards
-        else:
-            for draw in range(draw_num):
-                self.draw_card.append(self.all_cards.pop())
+        draw_card = []
+        for draw in range(draw_num):
+            draw_card.append(self.all_cards.pop())
 
 
-        return self.draw_card
+        return draw_card
 
 
 """
@@ -49,6 +46,6 @@ card_left is the decks - draw_card
 
 if __name__ == "__main__":
     deck = Deck(2)
-    print(deck.pick_card(5))
+    # print(deck.pick_card(5))
 
 
